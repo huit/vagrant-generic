@@ -15,6 +15,8 @@ In order to keep the repo small and light i've opted to require the user run the
 To install r10k on a Mac: 
 >sudo gem install r10k
 
+Install Modules:
+>r10k puppetfile install
 
 * Install Virtual Box
 * Install Vagrant
