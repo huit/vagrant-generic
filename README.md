@@ -1,6 +1,11 @@
 vagrant-generic
 ===============
 
+=== NOTE User Virtual bot 4.2.12 not 4.2.14 NOTE 
+
+https://github.com/mitchellh/vagrant/issues/1850
+
+===
 Generic Vagrant Powered Development Enviroment
 
 I've used a Box (image) from http://puppet-vagrant-boxes.puppetlabs.com/
