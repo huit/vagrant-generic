@@ -1,7 +1,7 @@
 vagrant-generic
 ===============
 
-=== NOTE User Virtual bot 4.2.12 not 4.2.14 NOTE 
+=== NOTE User Virtualbox 4.2.12 not 4.2.14 NOTE 
 
 https://github.com/mitchellh/vagrant/issues/1850
 
