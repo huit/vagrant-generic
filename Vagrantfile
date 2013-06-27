@@ -77,6 +77,7 @@ Vagrant.configure("2") do |config|
     puppet.module_path = "modules"
     puppet.manifests_path = "manifests"
     puppet.manifest_file  = "init.pp"
+    puppet.options = "--verbose --hiera_config /vagrant/hiera/hiera.yaml"
   end
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
