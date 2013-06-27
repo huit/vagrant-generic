@@ -19,4 +19,8 @@ To install r10k on a Mac:
 
 
 
-vagrant init CentOS6.4-x64 http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box
+The CentOS6.4-x64 "box" came from this URL:
+ http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box
+
+To instsall the aws plugin run this command:
+> vagrant plugin install vagrant-aws
