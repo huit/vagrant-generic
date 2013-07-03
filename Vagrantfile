@@ -48,8 +48,8 @@ Vagrant.configure("2") do |config|
     aws.secret_access_key = ""
     aws.keypair_name = "amazonhosts"
 
-    #aws.ami = "ami-6a374a03"
-    aws.ami = "ami-a96b01c0"
+    aws.ami = "ami-e6601d8f"
+    #aws.ami = "ami-a96b01c0"
     aws.security_groups = "quicklaunch-1"
     aws.instance_type = "t1.micro"
 
