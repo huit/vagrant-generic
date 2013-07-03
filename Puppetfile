@@ -3,6 +3,9 @@
 mod 'r10k',
   :git => 'https://github.com/huit/puppet-r10k'
 
+mod 'common',
+  :git => 'https://github.com/huit/puppet-common.git'
+
 # This is currently a noop but will be supported in the future.
 forge 'forge.puppetlabs.com'
 

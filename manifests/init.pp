@@ -1,4 +1,6 @@
 node default {
+  class { 'common': }
+
   class { 'mysql': }
   class { 'mysql::server': }
   class { 'mysql::java': }
