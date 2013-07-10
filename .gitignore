@@ -1,3 +1,4 @@
 modules
 .vagrant
 *.swp
+Vagrantfile
