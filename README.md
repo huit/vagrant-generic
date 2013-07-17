@@ -1,38 +1,43 @@
 vagrant-generic
 ===============
 
-=== NOTE User Virtualbox 4.2.12 not 4.2.14 NOTE 
-
-https://github.com/mitchellh/vagrant/issues/1850
-
-===
 Generic Vagrant Powered Development Enviroment
 
-We've used a Box (image) from http://puppet-vagrant-boxes.puppetlabs.com/
+General notes
+-------------
+For the local install, we are using a box (image) from Puppet Labs (http://puppet-vagrant-boxes.puppetlabs.com/).  For the remote install, we are using the newest Amazon Linux AMI.
 
-In order to keep the repo small and light i've opted to require the user run the r10k command rather then check in all the puppet module dependenciesinto the repo. This way the developer can just update the Puppetfile and update the dependencies themselves as needed.
+Puppet modules are pulled in using r10k on the VM.
 
-To install r10k on a Mac: 
->sudo gem install r10k
-
-Install Modules:
->r10k puppetfile install
-
-* Install Virtual Box
+Local install using VirtualBox
+------------------------------
+* Install VirtualBox
 * Install Vagrant
-* Checkout out This Repo
-* Copy Vagrantfile.example -> Vagrantfile
+* Checkout this repo
 * Run:
 >vagrant up
 
+Remote install using AWS
+------------------------
+* Install Vagrant 1.2 or newer
+* Install the Vagrant AWS plugin:
+>vagrant plugin install vagrant-aws
+* Create an EC2 Security Group called "vagrant"
+* Create a Vagrant configuration file in your home directory to contain your AWS config values:
+  >cd ~/.vagrant.d/
+  >vim Vagrantfile
+  It should resemble this:
+``
+Vagrant.configure("2") do |config|
+  config.vm.provider :aws do |aws, override|
+    aws.access_key_id = "YOUR_AWS_ACCESS_KEY"
+    aws.secret_access_key = "YOUR_AWS_SECRET_KEY"
+    aws.keypair_name = "CHOOSE_AN_EXISTING_KEYPAIR"
 
-
-The CentOS6.4-x64 "box" came from this URL:
- http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box
-
-To create instances in Amazon AWS, instsall the AWS plugin by running this command:
-> vagrant plugin install vagrant-aws
-
-Then edit the Vagrantfile as needed, update the keys, userdata and secrets 
-For more options see: https://github.com/mitchellh/vagrant-aws
-
+    override.ssh.private_key_path = "PATH_TO_PRIVATE_KEY"
+  end
+end
+``
+  For more options see: https://github.com/mitchellh/vagrant-aws
+# Run:
+>vagrant up --provider=aws
