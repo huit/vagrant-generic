@@ -15,7 +15,8 @@ Local install using VirtualBox
 * Install Vagrant
 * Checkout this repo
 * Run:
->vagrant up --provider virtualbox
+
+        vagrant up --provider virtualbox
 
 Local install using VMWare Fusion
 ---------------------------------
@@ -23,29 +24,32 @@ Local install using VMWare Fusion
 * Install Vagrant licensed for VMWare Fusion
 * Checkout this repo
 * Run:
->vagrant up --provider fusion
+
+        vagrant up --provider fusion
 
 Remote install using AWS
 ------------------------
 * Install Vagrant 1.2 or newer
 * Install the Vagrant AWS plugin:
->vagrant plugin install vagrant-aws
+        vagrant plugin install vagrant-aws
 * Create an EC2 Security Group called "vagrant"
 * Create a Vagrant configuration file in your home directory to contain your AWS config values:
-  >cd ~/.vagrant.d/
-  >vim Vagrantfile
-  It should resemble this:
-``
-Vagrant.configure("2") do |config|
-  config.vm.provider :aws do |aws, override|
-    aws.access_key_id = "YOUR_AWS_ACCESS_KEY"
-    aws.secret_access_key = "YOUR_AWS_SECRET_KEY"
-    aws.keypair_name = "CHOOSE_AN_EXISTING_KEYPAIR"
 
-    override.ssh.private_key_path = "PATH_TO_PRIVATE_KEY"
-  end
-end
-``
+        cd ~/.vagrant.d/
+        vim Vagrantfile
+It should resemble this:
+```ruby
+    Vagrant.configure("2") do |config|
+      config.vm.provider :aws do |aws, override|
+        aws.access_key_id = "YOUR_AWS_ACCESS_KEY"
+        aws.secret_access_key = "YOUR_AWS_SECRET_KEY"
+        aws.keypair_name = "CHOOSE_AN_EXISTING_KEYPAIR"
+
+        override.ssh.private_key_path = "PATH_TO_PRIVATE_KEY"
+      end
+    end
+```
   For more options see: https://github.com/mitchellh/vagrant-aws
-# Run:
->vagrant up --provider=aws
+* Run:
+
+        vagrant up --provider=aws
