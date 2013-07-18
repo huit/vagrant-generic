@@ -4,8 +4,10 @@
 Vagrant.require_plugin 'aws'
 Vagrant.configure('2') do |config|
   # Puppet Labs CentOS 6.4 for VirtualBox
-  config.vm.box     = 'puppetlabs-centos-64-x64-vbox'
-  config.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box'
+  config.vm.provider :virtualbox do |virtualbox, override|
+    override.vm.box     = 'puppetlabs-centos-64-x64-vbox'
+    override.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box'
+  end
 
   # Puppet Labs CentOS 6.4 for VMWare Fusion
   config.vm.provider :fusion do |fusion, override|

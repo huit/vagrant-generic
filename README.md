@@ -15,7 +15,15 @@ Local install using VirtualBox
 * Install Vagrant
 * Checkout this repo
 * Run:
->vagrant up
+>vagrant up --provider virtualbox
+
+Local install using VMWare Fusion
+---------------------------------
+* Install VMWare Fusion
+* Install Vagrant licensed for VMWare Fusion
+* Checkout this repo
+* Run:
+>vagrant up --provider fusion
 
 Remote install using AWS
 ------------------------
