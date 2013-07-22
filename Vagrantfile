@@ -10,7 +10,7 @@ Vagrant.configure('2') do |config|
   end
 
   # Puppet Labs CentOS 6.4 for VMWare Fusion
-  config.vm.provider :fusion do |fusion, override|
+  config.vm.provider :vmware_fusion do |fusion, override|
     override.vm.box     = 'puppetlabs-centos-64-x64-fusion'
     override.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-fusion503.box'
   end
