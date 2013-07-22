@@ -1,10 +1,8 @@
 #!/bin/sh
 
-yum install -y git
+yum install -y -q git
 
-gem list | grep ^r10k >/dev/null
-
-if [[ $? -ne 0 ]]; then
+if [[ "$(gem query -i -n r10k)" == "false" ]]; then
   gem install --no-rdoc --no-ri r10k
 fi
 
