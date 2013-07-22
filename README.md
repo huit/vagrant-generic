@@ -14,18 +14,14 @@ Local install using VirtualBox
 * Install VirtualBox
 * Install Vagrant
 * Checkout this repo
-* Run:
-
-        vagrant up --provider virtualbox
+* Run: `vagrant up --provider virtualbox`
 
 Local install using VMWare Fusion
 ---------------------------------
 * Install VMWare Fusion
 * Install Vagrant licensed for VMWare Fusion
 * Checkout this repo
-* Run:
-
-        vagrant up --provider fusion
+* Run: `vagrant up --provider vmware_fusion`
 
 Remote install using AWS
 ------------------------
@@ -33,10 +29,7 @@ Remote install using AWS
 * Install the Vagrant AWS plugin:
         vagrant plugin install vagrant-aws
 * Create an EC2 Security Group called "vagrant"
-* Create a Vagrant configuration file in your home directory to contain your AWS config values:
-
-        cd ~/.vagrant.d/
-        vim Vagrantfile
+* Create a Vagrant configuration file in your home directory to contain your AWS config values: `cd ~/.vagrant.d/ && vim Vagrantfile`
 It should resemble this:
 ```ruby
     Vagrant.configure("2") do |config|
@@ -50,6 +43,4 @@ It should resemble this:
     end
 ```
   For more options see: https://github.com/mitchellh/vagrant-aws
-* Run:
-
-        vagrant up --provider=aws
+* Run: `vagrant up --provider=aws`
