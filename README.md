@@ -37,8 +37,12 @@ It should resemble this:
         aws.access_key_id = "YOUR_AWS_ACCESS_KEY"
         aws.secret_access_key = "YOUR_AWS_SECRET_KEY"
         aws.keypair_name = "CHOOSE_AN_EXISTING_KEYPAIR"
+        aws.ami = ami-50dda139
+        aws.security_groups = "basic-web"
+
 
         override.ssh.private_key_path = "PATH_TO_PRIVATE_KEY"
+        override.ssh.username = "ec2-user"
       end
     end
 ```
