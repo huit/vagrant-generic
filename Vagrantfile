@@ -17,7 +17,6 @@ Vagrant.configure('2') do |config|
 
   # Amazon Linux AMI
   config.vm.provider :aws do |aws, override|
-    aws.ami             = 'dummy'
     override.vm.box     = 'huit-amazon-linux-generic'
     override.vm.box_url = 'https://raw.github.com/huit/huit-vagrant-boxes/master/aws/amazon-linux-generic.box'
   end
@@ -31,9 +30,8 @@ Vagrant.configure('2') do |config|
 
   # Puppet provisioner for primary configuration
   config.vm.provision :puppet do |puppet|
-    puppet.module_path    = "modules"
     puppet.manifests_path = "manifests"
     puppet.manifest_file  = "init.pp"
-    puppet.options        = "--verbose --hiera_config /vagrant/hiera/hiera.yaml"
+    puppet.options        = "--verbose --hiera_config /vagrant/hiera/hiera.yaml --modulepath /vagrant/modules"
   end
 end

@@ -5,7 +5,8 @@ Generic Vagrant Powered Development Enviroment
 
 General notes
 -------------
-For the local install, we are using a box (image) from Puppet Labs (http://puppet-vagrant-boxes.puppetlabs.com/).  For the remote install, we are using the newest Amazon Linux AMI.
+For the local install, we are using a box (image) from Puppet Labs (http://puppet-vagrant-boxes.puppetlabs.com/).
+For the remote install, we are using the newest Amazon Linux AMI.
 
 Puppet modules are pulled in using r10k on the VM.
 
@@ -28,9 +29,10 @@ Remote install using AWS
 * Install Vagrant 1.2 or newer
 * Install the Vagrant AWS plugin:
         vagrant plugin install vagrant-aws
-* Create an EC2 Security Group called "vagrant"
-* Create a Vagrant configuration file in your home directory to contain your AWS config values: `cd ~/.vagrant.d/ && vim Vagrantfile`
-It should resemble this:
+* Create an EC2 Security Group called "vagrant".  Open up at minimum SSH access.
+* Create a Vagrant configuration file in your home directory to contain your AWS
+  config values: `cd ~/.vagrant.d/ && vim Vagrantfile`
+  It should resemble this:
 ```ruby
     Vagrant.configure("2") do |config|
       config.vm.provider :aws do |aws, override|
@@ -47,4 +49,5 @@ It should resemble this:
     end
 ```
   For more options see: https://github.com/mitchellh/vagrant-aws
+* Import the Vagrant box we are using: `vagrant box add huit-amazon-linux-generic https://raw.github.com/huit/huit-vagrant-boxes/master/aws/amazon-linux-generic.box`
 * Run: `vagrant up --provider=aws`
