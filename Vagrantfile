@@ -17,7 +17,6 @@ Vagrant.configure('2') do |config|
 
   # Amazon Linux AMI
   config.vm.provider :aws do |aws, override|
-    aws.ami             = 'dummy'
     override.vm.box     = 'huit-amazon-linux-generic'
     override.vm.box_url = 'https://raw.github.com/huit/huit-vagrant-boxes/master/aws/amazon-linux-generic.box'
   end
