@@ -7,7 +7,8 @@ mod 'common',
   :git => 'https://github.com/huit/puppet-common.git'
 
 mod 'mediawiki',
-  :git => 'https://github.com/huit/puppet-mediawiki'
+  :git => 'https://github.com/huit/puppet-mediawiki.git',
+  :ref => 'rds_support'
 
 # This is currently a noop but will be supported in the future.
 forge 'forge.puppetlabs.com'
@@ -26,3 +27,4 @@ mod 'puppetlabs/vcsrepo', '0.1.1'
 mod 'ripienaar/concat', '0.2.0'
 mod 'thias/glusterfs', '0.0.2'
 mod 'stahnma/epel', '0.0.5'
+mod 'saz/memcached'
