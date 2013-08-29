@@ -1,6 +1,7 @@
 node default {
   stage { 'pre': before => Stage['main'] }
-  class { 'apache':  }
+
+  class { 'apache': default_ssl_vhost => true }
   class { 'epel': stage => 'pre' }
   class { 'common': }
 
