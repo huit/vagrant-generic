@@ -1,5 +1,6 @@
 node default {
   stage { 'pre': before => Stage['main'] }
+  class { 'apache':  }
   class { 'epel': stage => 'pre' }
   class { 'common': }
 
