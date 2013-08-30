@@ -8,7 +8,7 @@ mod 'common',
 
 mod 'mediawiki',
   :git => 'https://github.com/huit/puppet-mediawiki.git',
-  :ref => 'rds_support'
+  :ref => 'mediawiki-poc'
 
 mod 'apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache'
