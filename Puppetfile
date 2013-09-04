@@ -6,6 +6,10 @@ mod 'r10k',
 mod 'common',
   :git => 'https://github.com/huit/puppet-common.git'
 
+mod 'hubot',
+  :git => 'https://github.com/tfhartmann/puppet-hubot.git',
+  :ref => 'rhel'
+
 # This is currently a noop but will be supported in the future.
 forge 'forge.puppetlabs.com'
 
@@ -19,6 +23,8 @@ mod 'puppetlabs/postgresql', '2.1.1'
 mod 'puppetlabs/puppetdb', '1.2.1'
 mod 'puppetlabs/stdlib', '3.2.0'
 mod 'puppetlabs/vcsrepo', '0.1.1'
+mod 'puppetlabs/nodejs', '0.4.0'
+mod 'puppetlabs/git', '0.0.2'
 mod 'ripienaar/concat', '0.2.0'
 mod 'thias/glusterfs', '0.0.2'
 mod 'stahnma/epel', '0.0.5'
