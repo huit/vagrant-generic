@@ -7,8 +7,7 @@ mod 'common',
   :git => 'https://github.com/huit/puppet-common.git'
 
 mod 'hubot',
-  :git => 'https://github.com/tfhartmann/puppet-hubot.git',
-  :ref => 'rhel'
+  :git => 'https://github.com/tfhartmann/puppet-module-hubot.git'
 
 # This is currently a noop but will be supported in the future.
 forge 'forge.puppetlabs.com'
