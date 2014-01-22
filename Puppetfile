@@ -13,6 +13,7 @@ mod 'openstack_mirrors',
 # Install modules from the Forge
 mod 'puppetlabs/apache'
 mod 'puppetlabs/concat'
+mod 'puppetlabs/firewall'
 mod 'puppetlabs/mrepo'
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/vcsrepo'
