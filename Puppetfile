@@ -10,7 +10,7 @@ mod 'common',
 forge 'forge.puppetlabs.com'
 
 # Install modules from the Forge
-mod 'cprice404/inifile', '0.10.0'
+mod 'puppetlabs/inifile', '1.0.0'
 mod 'ploperations/interval', '0.0.1'
 mod 'puppetlabs/apt', '1.1.0'
 mod 'puppetlabs/firewall', '0.3.0'
