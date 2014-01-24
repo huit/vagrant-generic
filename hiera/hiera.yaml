@@ -11,4 +11,5 @@
 # - %CommonAppData%\PuppetLabs\hiera\var on Windows
 # When specifying a datadir, make sure the directory exists.
   :datadir:
-    - '/vagrant/hiera'
+    '/vagrant/hiera'
+
