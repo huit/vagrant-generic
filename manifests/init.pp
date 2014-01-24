@@ -5,5 +5,5 @@ node default {
     db_type            => 'mysql',
     configure_scl_repo => false,
   }
-  class { 'foreman::puppetmaster': } 
+  class { 'puppet': server => true }
 }
