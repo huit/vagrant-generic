@@ -1,2 +1,3 @@
 # Default Yaml File for vagrant nodes
 ---
+openstack_repos::role: 'storage'
