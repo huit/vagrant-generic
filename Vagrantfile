@@ -24,6 +24,7 @@ Vagrant.configure('2') do |config|
   # Forward standard ports (local only, does not run under AWS)
   config.vm.network :forwarded_port, guest: 80,  host: 8080, auto_correct: true
   config.vm.network :forwarded_port, guest: 443, host: 8443, auto_correct: true
+  config.vm.network :forwarded_port, guest: 8000, host: 8000, auto_correct: true
 
   # Install r10k using the shell provisioner and download the Puppet modules
   config.vm.provision :shell, :path => 'bootstrap.sh'
