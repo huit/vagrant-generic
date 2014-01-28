@@ -1,6 +1,7 @@
 node default {
   stage { 'pre': before => Stage['main'] }
   class { 'epel': stage => 'pre' }
+  class { 'puppetlabs_yum': }
   class { 'common': }
   yumrepo { 'huit-splunk':
     enabled  => '1',
