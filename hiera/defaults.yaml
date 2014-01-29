@@ -1,2 +1,3 @@
 # Default Yaml File for vagrant nodes
 ---
+openstack_gluster_swift::lvm_pv: '/dev/sdb'
