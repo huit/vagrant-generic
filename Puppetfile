@@ -3,6 +3,9 @@
 mod 'r10k',
   :git => 'https://github.com/huit/puppet-r10k'
 
+mod 'openstack_gluster_swift',
+  :git => 'https://github.com/huit/puppet-openstack_gluster_swift'
+
 mod 'openstack_repos',
   :git => 'https://github.com/huit/puppet-openstack_repos'
 
