@@ -1,5 +1,8 @@
 # Default Yaml File for vagrant nodes
 ---
-openstack_gluster_swift::lvm_pv: '/dev/sdb'
 openstack_gluster_swift::swift_ip: '10.242.118.31'
 openstack_gluster_swift::gluster_ip: '10.242.121.31'
+openstack_gluster_swift::lvm_pv: '/dev/sda'
+openstack_gluster_swift::lvm_vg: 'vg_data'
+openstack_gluster_swift::lvm_lv: 'lv_swift'
+openstack_gluster_swift::lvm_size: '20G'
