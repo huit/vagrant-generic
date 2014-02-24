@@ -1,3 +1,5 @@
 modules
 .vagrant
+.librarian
+.tmp
 *.swp

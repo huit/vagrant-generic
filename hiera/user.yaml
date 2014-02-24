@@ -1,2 +1,2 @@
-# Default Yaml File for user data
----
+# User-overridden Hiera values for Puppet
+--- {}
