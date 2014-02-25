@@ -11,7 +11,7 @@ Vagrant.configure('2') do |config|
 
   # By default Vagrant uses a host-only network on a private IP space that, at
   # Harvard, is reserved by the Law School. Instead, use a private IP space
-  # that will never be routed (anything in the massive 172.16.0.0/15 range).
+  # that will never be routed (anything in the massive 172.16.0.0/12 range).
   config.vm.network :private_network, ip: '172.16.10.10'
 
   # Hostname can be anything you want that does not conflict with "real" DNS
