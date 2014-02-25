@@ -5,6 +5,8 @@ A generic Vagrant-powered development environment. This is a good basic starting
 
 General notes
 -------------
+Vagrant 1.4+ is required for the private networking feature to work.
+
 For the local install, we are using the [Puppet Labs](http://puppet-vagrant-boxes.puppetlabs.com/) CentOS box. For the remote install, we are using the newest Amazon Linux AMI. CentOS and Amazon Linux are reasonably similar, and are binary- and package-compatible.
 
 We run [librarian-puppet](http://librarian-puppet.com/) to fetch Puppet modules and dependencies once the VM has booted.
@@ -25,7 +27,7 @@ Local install using VMWare Fusion or Workstation
 
 Remote install using AWS
 ------------------------
-* Install a reasonably new version of Vagrant (1.2+)
+* Install [Vagrant](http://www.vagrantup.com/downloads.html)
 * Install the Vagrant AWS plugin:
 ```
     vagrant plugin install vagrant-aws
@@ -51,3 +53,9 @@ Remote install using AWS
 ```
   For more options see: https://github.com/mitchellh/vagrant-aws
 * Run: `vagrant up --provider=aws`
+
+Extra credit
+------------
+Install the `vagrant-hostsupdater` plugin to keep your local `/etc/hosts` file in sync with your VM's IP address and allow you to access VMs by hostname.
+
+Install the `vagrant-vbguest` plugin to keep the guest tools up-to-date with new versions of VirtualBox.

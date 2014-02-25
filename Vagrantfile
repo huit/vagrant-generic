@@ -1,7 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Load AWS functionality if the plugin is installed
+# Load AWS functionality if the plugin is installed. Networking options below
+# will be ignored by the AWS plugin.
 Vagrant.require_plugin 'vagrant-aws' if defined? VagrantPlugins::AWS
 
 Vagrant.configure('2') do |config|
