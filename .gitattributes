@@ -5,3 +5,10 @@
 Vagrantfile text eol=lf
 Puppetfile text eol=lf
 *.pp text eol=lf
+*.sh text eol=lf
+*.rb text eol=lf
+*.erb text eol=lf
+*.opts text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
