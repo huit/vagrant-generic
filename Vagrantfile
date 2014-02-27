@@ -21,8 +21,6 @@ Vagrant.configure('2') do |config|
   # DNS name. To install it run: `vagrant plugin install vagrant-hostsupdater`
   config.vm.hostname = 'vagrant.dev'
 
-  config.vm.synced_folder "html/", "/var/www/html", create: true
-
   # Puppet Labs CentOS 6.5 for VirtualBox
   config.vm.provider :virtualbox do |virtualbox, override|
     override.vm.box     = 'centos-65-x64-virtualbox-puppet'
