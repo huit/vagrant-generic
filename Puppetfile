@@ -1,13 +1,4 @@
-# Install modules from git
-# Install r10k from tfhartmann's fork
-mod 'r10k',
-  :git => 'https://github.com/huit/puppet-r10k'
-
-mod 'common',
-  :git => 'https://github.com/huit/puppet-common.git'
-
-# This is currently a noop but will be supported in the future.
-forge 'forge.puppetlabs.com'
+forge "http://forge.puppetlabs.com"
 
 # Install modules from the Forge
 mod 'puppetlabs/inifile', '1.0.0'
@@ -23,3 +14,5 @@ mod 'puppetlabs/concat', '1.0.0'
 mod 'thias/glusterfs', '0.0.2'
 mod 'stahnma/epel', '0.0.6'
 mod 'stahnma/puppetlabs_yum', '0.1.4'
+mod 'common',
+  :git => 'https://github.com/huit/puppet-common.git'

@@ -1,2 +1,2 @@
-# Default Yaml File for vagrant nodes
----
+# Default Hiera values for Puppet
+--- {}

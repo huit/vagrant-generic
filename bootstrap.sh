@@ -1,4 +1,16 @@
 #!/bin/sh
-[[ $(rpm -qa | grep ^git-) ]] || (yum install -y -q git && sleep 5)
-[[ "$(gem query -i -n r10k)" == "true" ]] || gem install --no-rdoc --no-ri r10k
-cd /vagrant && r10k -v info puppetfile install
+# Basic bootstrap script that installs librarian-puppet and uses it to fetch
+# Puppet modules. This script assumes a RedHat-derived distribution.
+
+if [ ! -x /usr/bin/git ]; then
+  yum install -y -q git-core rubygems ruby-devel gcc
+  sleep 4
+fi
+
+if [ "$(gem query -i -n librarian-puppet)" != "true" ]; then
+  gem install --no-rdoc --no-ri librarian-puppet
+  cd /vagrant && librarian-puppet install --clean --verbose
+else
+  cd /vagrant && librarian-puppet update --verbose
+fi
+# vim: set ft=sh ts=2 sw=2 ei:
