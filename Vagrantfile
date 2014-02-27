@@ -52,7 +52,7 @@ Vagrant.configure('2') do |config|
   end
 
   # Install librarian-puppet and use it to download Puppet modules
-  config.vm.provision :shell, :path => 'bootstrap.sh'
+  config.vm.provision :shell, :path => 'bootstrap.sh' unless ENV['LIBRARIAN'] == 'false'
 
   # Puppet provisioner for primary configuration
   config.vm.provision :puppet do |puppet|

@@ -59,3 +59,8 @@ Extra credit
 Install the `vagrant-hostsupdater` plugin to keep your local `/etc/hosts` file in sync with your VM's IP address and allow you to access VMs by hostname.
 
 Install the `vagrant-vbguest` plugin to keep the guest tools up-to-date with new versions of VirtualBox.
+
+To speed up running `vagrant provision` pass in the environment variable `LIBRARIAN=false`, which will disable running librarian-puppet to check for and update Puppet modules. Unless you have changed the Puppetfile.lock, there is no need to run librarian additional times.
+```
+  LIBRARIAN=false vagrant provision
+```
