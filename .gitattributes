@@ -1,0 +1,14 @@
+# Set default behaviour, in case users don't have core.autocrlf set.
+* text=auto
+
+# payload files that get transmitted to Linux hosts
+Vagrantfile text eol=lf
+Puppetfile text eol=lf
+*.pp text eol=lf
+*.sh text eol=lf
+*.rb text eol=lf
+*.erb text eol=lf
+*.opts text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
