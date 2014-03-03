@@ -60,4 +60,19 @@ Vagrant.configure('2') do |config|
     puppet.manifest_file  = "init.pp"
     puppet.options        = "--verbose --hiera_config /vagrant/hiera/hiera.yaml --modulepath /vagrant/modules"
   end
+
+  config.vm.define "web" do |web|
+    web.vm.hostname = 'vagrant.dev'
+    web.vm.box = "web"
+    web.vm.network :private_network, ip: '172.16.10.10'
+    web.vm.network :forwarded_port, guest: 80,  host: 8080, auto_correct: true
+    web.vm.network :forwarded_port, guest: 443, host: 8443, auto_correct: true
+  end
+
+  config.vm.define "mongodb1" do |mongodb1|
+    mongodb1.vm.hostname = 'mongodb1.dev'
+    mongodb1.vm.box = "mongodb1"
+    mongodb1.vm.network :private_network, ip: '172.16.10.11'
+  end
+
 end
