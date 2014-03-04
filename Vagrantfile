@@ -13,7 +13,7 @@ Vagrant.configure('2') do |config|
   # By default Vagrant uses a host-only network on a private IP space that, at
   # Harvard, is reserved by the Law School. Instead, use a private IP space
   # that will never be routed (anything in the massive 172.16.0.0/12 range).
-  config.vm.network :private_network, ip: '172.16.10.10'
+  #config.vm.network :private_network, ip: '172.16.10.10'
 
   # Hostname can be anything you want that does not conflict with "real" DNS
   #
@@ -73,6 +73,12 @@ Vagrant.configure('2') do |config|
     mongodb1.vm.hostname = 'mongodb1.dev'
     mongodb1.vm.box = "mongodb1"
     mongodb1.vm.network :private_network, ip: '172.16.10.11'
+  end
+
+  config.vm.define "mongodb2" do |mongodb2|
+    mongodb2.vm.hostname = 'mongodb2.dev'
+    mongodb2.vm.box = "mongodb2"
+    mongodb2.vm.network :private_network, ip: '172.16.10.12'
   end
 
 end

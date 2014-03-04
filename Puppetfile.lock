@@ -1,10 +1,10 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    puppetlabs/apache (0.11.0)
+    puppetlabs/apache (1.0.0)
       puppetlabs/concat (>= 1.0.0)
       puppetlabs/stdlib (>= 2.4.0)
-    puppetlabs/apt (1.4.1)
+    puppetlabs/apt (1.4.2)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/concat (1.1.0-rc1)
       puppetlabs/stdlib (>= 3.0.0)

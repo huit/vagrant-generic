@@ -8,6 +8,17 @@ node 'vagrant.dev' {
   package { 'vim-enhanced': ensure => installed }
   package { 'emacs':        ensure => installed }
 
+  host { 'mongodb1.dev':
+    ensure       => present,
+    host_aliases => 'mongodb1',
+    ip           => '172.16.10.11',
+  }
+  host { 'mongodb2.dev':
+    ensure       => present,
+    host_aliases => 'mongodb2',
+    ip           => '172.16.10.12',
+  }
+
   # Install and run Apache with its default configuration
   class { 'apache':
     default_vhost => true,
@@ -23,6 +34,17 @@ node default {
   # Install text editors
   package { 'vim-enhanced': ensure => installed }
   package { 'emacs':        ensure => installed }
+
+  host { 'mongodb1.dev':
+    ensure       => present,
+    host_aliases => 'mongodb1',
+    ip           => '172.16.10.11',
+  }
+  host { 'mongodb2.dev':
+    ensure       => present,
+    host_aliases => 'mongodb2',
+    ip           => '172.16.10.12',
+  }
 
   class {'::mongodb::globals':
     manage_package_repo => true,
