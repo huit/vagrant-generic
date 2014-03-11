@@ -2,8 +2,10 @@
 # vi: set ft=ruby :
 
 # Load AWS functionality if the plugin is installed. Networking options below
-# will be ignored by the AWS plugin.
-Vagrant.require_plugin 'vagrant-aws' if defined? VagrantPlugins::AWS
+# will be ignored by the AWS plugin. This is un-necessary in Vagrant >= 1.5.0
+if Gem::Version.new(Vagrant::VERSION) < Gem::Version.new('1.5.0')
+  Vagrant.require_plugin 'vagrant-aws' if defined? VagrantPlugins::AWS
+end
 
 Vagrant.configure('2') do |config|
   # Forward standard ports (local only, does not run under AWS)
