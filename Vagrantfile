@@ -58,8 +58,10 @@ Vagrant.configure('2') do |config|
 
   # Puppet provisioner for primary configuration
   config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = "manifests"
-    puppet.manifest_file  = "init.pp"
-    puppet.options        = "--verbose --hiera_config /vagrant/hiera/hiera.yaml --modulepath /vagrant/modules"
+    puppet.manifests_path    = 'manifests'
+    puppet.manifest_file     = 'init.pp'
+    puppet.module_path       = 'modules'
+    puppet.hiera_config_path = 'hiera.yaml'
+    puppet.options           = '--verbose'
   end
 end
