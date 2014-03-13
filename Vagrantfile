@@ -21,7 +21,10 @@ Vagrant.configure('2') do |config|
   #
   # If you install the hostsupdater plugin, you can access the VM via its
   # DNS name. To install it run: `vagrant plugin install vagrant-hostsupdater`
-  config.vm.hostname = 'vagrant.dev'
+  config.vm.hostname = 'wordpress.dev'
+
+  # Synchronize a local folder to the Apache docroot
+  config.vm.synced_folder "html/", "/var/www/html", create: true
 
   # Puppet Labs CentOS 6.5 for VirtualBox
   config.vm.provider :virtualbox do |virtualbox, override|
@@ -58,8 +61,10 @@ Vagrant.configure('2') do |config|
 
   # Puppet provisioner for primary configuration
   config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = "manifests"
-    puppet.manifest_file  = "init.pp"
-    puppet.options        = "--verbose --hiera_config /vagrant/hiera/hiera.yaml --modulepath /vagrant/modules"
+    puppet.manifests_path    = 'manifests'
+    puppet.manifest_file     = 'init.pp'
+    puppet.module_path       = 'modules'
+    puppet.hiera_config_path = 'hiera.yaml'
+    puppet.options           = '--verbose'
   end
 end

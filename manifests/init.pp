@@ -13,5 +13,15 @@ node default {
     default_vhost => true,
     keepalive     => true,
   }
+
+  include apache::mod::php
+  include mysql::server
+
+  mysql::db { 'wordpress':
+    user     => 'wordpress',
+    password => 'secret',
+    host     => 'localhost',
+    grant    => [ 'ALL' ],
+  }
 }
 # vim: set ft=puppet ts=2 sw=2 ei:
