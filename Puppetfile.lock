@@ -8,6 +8,14 @@ FORGE
       puppetlabs/stdlib (>= 3.0.0)
     puppetlabs/stdlib (4.1.0)
 
+GIT
+  remote: https://github.com/huit/puppet-harvard.git
+  ref: master
+  sha: 77548d5658b18b990f9874cc44229ef4e7a3068b
+  specs:
+    harvard (0.1.0)
+
 DEPENDENCIES
+  harvard (>= 0)
   puppetlabs/apache (>= 0)
 

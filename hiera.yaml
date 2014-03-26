@@ -1,10 +1,10 @@
 ---
 :backends:
   - yaml
-:hierarchy:
-  - defaults
-  - user
-
 :yaml:
   :datadir:
     '/vagrant/hieradata'
+:hierarchy:
+  - user
+  - defaults
+:logger: console

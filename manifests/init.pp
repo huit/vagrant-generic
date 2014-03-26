@@ -8,6 +8,9 @@ node default {
   package { 'vim-enhanced': ensure => installed }
   package { 'emacs':        ensure => installed }
 
+  # Declare the Harvard class for a Harvard look and feel
+  class { 'harvard': }
+
   # Install and run Apache with its default configuration
   class { 'apache':
     default_vhost => true,
