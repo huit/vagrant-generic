@@ -1,0 +1,25 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    puppetlabs/apache (1.0.1)
+      puppetlabs/concat (>= 1.0.0)
+      puppetlabs/stdlib (>= 2.4.0)
+    puppetlabs/concat (1.1.0-rc1)
+      puppetlabs/stdlib (>= 3.0.0)
+    puppetlabs/stdlib (4.1.0)
+    stahnma/epel (0.0.6)
+    stahnma/puppetlabs_yum (0.1.4)
+
+GIT
+  remote: https://github.com/huit/puppet-harvard.git
+  ref: master
+  sha: 3add9bda22c97aed7fbe45f200b32126241c52eb
+  specs:
+    harvard (0.1.0)
+
+DEPENDENCIES
+  harvard (>= 0)
+  puppetlabs/apache (>= 0)
+  stahnma/epel (= 0.0.6)
+  stahnma/puppetlabs_yum (= 0.1.4)
+
