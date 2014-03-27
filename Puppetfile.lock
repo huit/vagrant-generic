@@ -1,11 +1,15 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
+    huit/splunk (1.4.2)
+      puppetlabs/inifile (>= 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
     puppetlabs/apache (1.0.1)
       puppetlabs/concat (>= 1.0.0)
       puppetlabs/stdlib (>= 2.4.0)
     puppetlabs/concat (1.1.0-rc1)
       puppetlabs/stdlib (>= 3.0.0)
+    puppetlabs/inifile (1.0.3)
     puppetlabs/stdlib (4.1.0)
     stahnma/epel (0.0.6)
     stahnma/puppetlabs_yum (0.1.4)
@@ -19,6 +23,7 @@ GIT
 
 DEPENDENCIES
   harvard (>= 0)
+  huit/splunk (>= 0)
   puppetlabs/apache (>= 0)
   stahnma/epel (= 0.0.6)
   stahnma/puppetlabs_yum (= 0.1.4)

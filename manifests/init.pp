@@ -20,5 +20,14 @@ node default {
     default_vhost => true,
     keepalive     => true,
   }
+  # Install and run Splunk as an Indexer
+  class { 'splunk':
+    type => 'indexer',
+  }
+  class { 'splunk::inputs':
+    input_hash =>  { 'splunktcp://50514' => {} }
+  }
+  splunk::ta::files { 'Splunk_TA_nix': }
+
 }
 # vim: set ft=puppet ts=2 sw=2 ei:
