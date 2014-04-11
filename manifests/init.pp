@@ -11,10 +11,5 @@ node default {
   # Declare the Harvard class for a Harvard look and feel
   class { 'harvard': }
 
-  # Install and run Apache with its default configuration
-  class { 'apache':
-    default_vhost => true,
-    keepalive     => true,
-  }
 }
 # vim: set ft=puppet ts=2 sw=2 ei:
