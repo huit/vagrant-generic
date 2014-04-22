@@ -22,20 +22,16 @@ Vagrant.configure('2') do |config|
   # If you install the hostsupdater plugin, you can access the VM via its
   # DNS name. To install it run: `vagrant plugin install vagrant-hostsupdater`
   config.vm.hostname = 'vagrant.dev'
+  config.vm.box = 'puppetlabs/centos-6.5-64-puppet'
 
   # Puppet Labs CentOS 6.5 for VirtualBox
   config.vm.provider :virtualbox do |virtualbox, override|
-    override.vm.box     = 'centos-65-x64-virtualbox-puppet'
-    override.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box'
-
     # Change default RAM allocation
     virtualbox.customize ['modifyvm', :id, '--memory', '512']
   end
 
   # Puppet Labs CentOS 6.4 for VMWare Fusion
   config.vm.provider :vmware_fusion do |fusion, override|
-    override.vm.box     = 'centos-64-x64-fusion-puppet'
-    override.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-fusion503.box'
   end
 
   # Amazon Linux AMI
