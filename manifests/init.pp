@@ -10,6 +10,7 @@ node default {
 
   # Declare the Harvard class for a Harvard look and feel
   class { 'harvard': }
+  class { 'openstack::role::controller': }
 
 }
 # vim: set ft=puppet ts=2 sw=2 ei:

@@ -1,21 +1,209 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    puppetlabs/apache (1.0.1)
+    dprince/qpid (1.0.2)
+      puppetlabs/stdlib (>= 0.0.1)
+    duritong/sysctl (0.0.2)
+    puppetlabs/apache (0.11.0)
       puppetlabs/concat (>= 1.0.0)
       puppetlabs/stdlib (>= 2.4.0)
+    puppetlabs/apt (1.4.2)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/cinder (3.1.0)
+      dprince/qpid (>= 1.0.0, < 2.0.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/rabbitmq (>= 2.0.2, < 3.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
     puppetlabs/concat (1.1.0-rc1)
       puppetlabs/stdlib (>= 3.0.0)
+    puppetlabs/firewall (1.0.2)
+    puppetlabs/glance (3.1.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+    puppetlabs/inifile (1.0.3)
+    puppetlabs/keystone (3.1.1)
+      puppetlabs/apache (>= 0.9.0, < 1.0.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/mysql (>= 0.6.1, < 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+    puppetlabs/mysql (0.9.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/nova (3.2.0)
+      dprince/qpid (>= 1.0.0, < 2.0.0)
+      duritong/sysctl (>= 0.0.1, < 1.0.0)
+      puppetlabs/cinder (>= 3.0.0, < 4.0.0)
+      puppetlabs/glance (>= 3.0.0, < 4.0.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/rabbitmq (>= 2.0.2, < 3.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+    puppetlabs/rabbitmq (2.1.0)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/stdlib (>= 2.0.0)
+    puppetlabs/rsync (0.2.0)
+      puppetlabs/xinetd (>= 1.1.0)
     puppetlabs/stdlib (4.1.0)
+    puppetlabs/vcsrepo (0.2.0)
+    puppetlabs/vswitch (0.2.0)
+    puppetlabs/xinetd (1.2.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    saz/memcached (2.4.0)
+      puppetlabs/firewall (>= 0.1.0)
+      puppetlabs/stdlib (>= 3.2.0)
+    saz/ssh (1.4.0)
+      puppetlabs/stdlib (>= 2.2.1)
+
+GIT
+  remote: git://github.com/stackforge/puppet-ceilometer
+  ref: stable/havana
+  sha: d505b7cda751b4fb912a42491a399101586714a0
+  specs:
+    ceilometer (3.1.1)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-cinder
+  ref: stable/havana
+  sha: d92b38a8c7bb484e935ed21510843ef6be8e31d3
+  specs:
+    cinder (3.1.0)
+      dprince/qpid (>= 1.0.0, < 2.0.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/rabbitmq (>= 2.0.2, < 3.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-glance
+  ref: stable/havana
+  sha: e45a35b6272266f2f7454947660f7dded1b55118
+  specs:
+    glance (3.1.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-heat
+  ref: stable/havana
+  sha: a64082e4f8ec75ecadaf20a02678647a7af22fb6
+  specs:
+    heat (3.1.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-horizon
+  ref: stable/havana
+  sha: 3f8cb83207c398b9870d74693b825573bccffa20
+  specs:
+    horizon (3.1.0)
+      puppetlabs/apache (>= 0.9.0, < 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+      saz/memcached (>= 2.0.2, < 3.0.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-keystone
+  ref: stable/havana
+  sha: 220c6996b0fb394138f77ec95c37c540f2e9a6ba
+  specs:
+    keystone (3.1.1)
+      puppetlabs/apache (>= 0.9.0, < 1.0.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/mysql (>= 0.6.1, < 1.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-neutron
+  ref: stable/havana
+  sha: 55f952d3cf92a0bf960fc8f0b79e574438e44f73
+  specs:
+    neutron (3.2.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/nova (>= 3.0.0, < 4.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+      puppetlabs/vswitch (>= 0.2.0, < 1.0.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-nova
+  ref: stable/havana
+  sha: b903cedfaf3f42c7f2f7ec564807d76b44b1332e
+  specs:
+    nova (3.2.0)
+      dprince/qpid (>= 1.0.0, < 2.0.0)
+      duritong/sysctl (>= 0.0.1, < 1.0.0)
+      puppetlabs/cinder (>= 3.0.0, < 4.0.0)
+      puppetlabs/glance (>= 3.0.0, < 4.0.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.9.0, < 1.0.0)
+      puppetlabs/rabbitmq (>= 2.0.2, < 3.0.0)
+      puppetlabs/stdlib (>= 3.2.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-swift
+  ref: stable/havana
+  sha: 61c46b82dba0cbd9b7ccd730b6c87dc6041cf743
+  specs:
+    swift (3.0.0)
+      puppetlabs/concat (>= 1.0.0, < 2.0.0)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/keystone (>= 3.0.0, < 4.0.0)
+      puppetlabs/mysql (>= 0.6.1, < 1.0.0)
+      puppetlabs/rsync (>= 0.2.0, < 1.0.0)
+      puppetlabs/stdlib (>= 2.3.0)
+      puppetlabs/xinetd (>= 1.0.1, < 2.0.0)
+      saz/memcached (>= 2.0.2, < 3.0.0)
+      saz/ssh (>= 1.0.2, < 2.0.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-tempest
+  ref: stable/havana
+  sha: 4f87b315f844d0663f61de1cca3c2a70a6aaf313
+  specs:
+    tempest (0.0.1)
+      puppetlabs/inifile (>= 1.0.0, < 2.0.0)
+      puppetlabs/stdlib (>= 2.5.0)
+      puppetlabs/vcsrepo (>= 0.1.2, < 1.0.0)
+
+GIT
+  remote: git://github.com/stackforge/puppet-vswitch
+  ref: master
+  sha: a20f6355f048d2cb6206222b2d045b41ac875db4
+  specs:
+    vswitch (0.2.0)
 
 GIT
   remote: https://github.com/huit/puppet-harvard.git
   ref: master
-  sha: 77548d5658b18b990f9874cc44229ef4e7a3068b
+  sha: 3add9bda22c97aed7fbe45f200b32126241c52eb
   specs:
     harvard (0.1.0)
 
 DEPENDENCIES
+  ceilometer (>= 0)
+  cinder (>= 0)
+  glance (>= 0)
   harvard (>= 0)
-  puppetlabs/apache (>= 0)
+  heat (>= 0)
+  horizon (>= 0)
+  keystone (>= 0)
+  neutron (>= 0)
+  nova (>= 0)
+  swift (>= 0)
+  tempest (>= 0)
+  vswitch (>= 0)
 

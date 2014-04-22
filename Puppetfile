@@ -1,12 +1,13 @@
 forge "http://forge.puppetlabs.com"
 
 mod 'harvard',
-  :git => 'https://github.com/huit/puppet-harvard.git'
+  :git => 'git://github.com/huit/puppet-harvard'
 
 ## The core OpenStack modules
 
-mod 'havana',
-  :git => "https://github.com/puppetlabs/puppetlabs-openstack.git"
+mod 'openstack',
+  :git => 'git://github.com/puppetlabs/puppetlabs-openstack',
+  :ref => 'master'
 
 mod "keystone",
   :git => "git://github.com/stackforge/puppet-keystone",
