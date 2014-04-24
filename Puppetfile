@@ -7,7 +7,7 @@ mod 'harvard',
 
 mod 'openstack',
   :git => 'git://github.com/puppetlabs/puppetlabs-openstack',
-  :ref => 'master'
+  :ref => 'stable/havana'
 
 mod "keystone",
   :git => "git://github.com/stackforge/puppet-keystone",
