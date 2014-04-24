@@ -7,47 +7,47 @@ mod 'harvard',
 
 mod 'openstack',
   :git => 'git://github.com/puppetlabs/puppetlabs-openstack',
-  :ref => 'stable/havana'
+  :ref => 'master'
 
 mod "keystone",
   :git => "git://github.com/stackforge/puppet-keystone",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "swift",
   :git => "git://github.com/stackforge/puppet-swift",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "glance",
   :git => "git://github.com/stackforge/puppet-glance",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "cinder",
   :git => "git://github.com/stackforge/puppet-cinder",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "neutron",
   :git => "git://github.com/stackforge/puppet-neutron",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "nova",
   :git => "git://github.com/stackforge/puppet-nova",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "heat",
   :git => "git://github.com/stackforge/puppet-heat",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "ceilometer",
   :git => "git://github.com/stackforge/puppet-ceilometer",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "horizon",
   :git => "git://github.com/stackforge/puppet-horizon",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "tempest",
   :git => "git://github.com/stackforge/puppet-tempest",
-  :ref => "stable/havana"
+  :ref => "master"
 
 mod "vswitch",
   :git => "git://github.com/stackforge/puppet-vswitch",
@@ -59,7 +59,7 @@ mod "vswitch",
 
 mod "apache",
   :git => "git://github.com/puppetlabs/puppetlabs-apache",
-  :ref => "0.x"
+  :ref => "master"
 
 mod "inifile",
   :git => "git://github.com/puppetlabs/puppetlabs-inifile",
@@ -67,7 +67,7 @@ mod "inifile",
 
 mod "mysql",
   :git => "git://github.com/puppetlabs/puppetlabs-mysql",
-  :ref => "0.x"
+  :ref => "2.2.x"
 
 mod "stdlib",
   :git => "git://github.com/puppetlabs/puppetlabs-stdlib",
@@ -132,4 +132,4 @@ mod "postgresql",
 
 mod "puppetdb",
   :git => "git://github.com/puppetlabs/puppetlabs-puppetdb",
-  :ref => "1.5.x"
+  :ref => "3.0.1"
