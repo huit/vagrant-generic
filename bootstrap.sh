@@ -8,7 +8,7 @@ if [ ! -x /usr/bin/git ]; then
 fi
 
 if [ "$(gem query -i -n librarian-puppet)" != "true" ]; then
-  gem install --no-rdoc --no-ri librarian-puppet
+  gem install --no-rdoc --no-ri librarian-puppet -v 1.0.3
   cd /vagrant && librarian-puppet install --clean --verbose
 else
   cd /vagrant && librarian-puppet update --verbose
