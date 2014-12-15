@@ -9,7 +9,7 @@ Vagrant 1.4+ is required for the private networking feature to work.
 
 For the local install, we are using the [Puppet Labs](http://puppet-vagrant-boxes.puppetlabs.com/) CentOS box. For the remote install, we are using the newest Amazon Linux AMI. CentOS and Amazon Linux are reasonably similar, and are binary- and package-compatible.
 
-We run [librarian-puppet](http://librarian-puppet.com/) to fetch Puppet modules and dependencies once the VM has booted.
+We run [librarian-puppet](http://librarian-puppet.com/) to fetch Puppet modules and dependencies once the VM has booted.  This work is performed by the [vagrant-librarian-puppet](https://github.com/mhahn/vagrant-librarian-puppet) Vagrant plugin; before proceeding, you must install this plugin by running `vagrant plugin install vagrant-librarian-puppet`.
 
 Local install using VirtualBox
 ------------------------------

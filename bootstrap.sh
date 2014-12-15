@@ -7,10 +7,4 @@ if [ ! -x /usr/bin/git ]; then
   sleep 4
 fi
 
-if [ "$(gem query -i -n librarian-puppet)" != "true" ]; then
-  gem install --no-rdoc --no-ri librarian-puppet -v 1.0.3
-  cd /vagrant && librarian-puppet install --clean --verbose
-else
-  cd /vagrant && librarian-puppet update --verbose
-fi
 # vim: set ft=sh ts=2 sw=2 ei:
