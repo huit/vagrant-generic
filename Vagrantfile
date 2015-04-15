@@ -22,7 +22,7 @@ Vagrant.configure('2') do |config|
   # If you install the hostsupdater plugin, you can access the VM via its
   # DNS name. To install it run: `vagrant plugin install vagrant-hostsupdater`
   config.vm.hostname = 'vagrant.dev'
-  config.vm.box = 'puppetlabs/centos-6.5-64-puppet'
+  config.vm.box = 'puppetlabs/centos-6.6-64-puppet'
 
   # Puppet Labs CentOS 6.5 for VirtualBox
   config.vm.provider :virtualbox do |virtualbox, override|
